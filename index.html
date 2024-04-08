@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Calibri:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap"
+    />
+  </head>
+
+  <style>
+    .logo-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  object-fit: cover;
+  min-height: 50px;
+}
+.it {
+  color: var(--color-lightsteelblue);
+}
+.predictit {
+  margin: 0;
+  height: 45px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 800;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.logo-parent,
+.predictit-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.predictit-wrapper {
+  flex-direction: column;
+  padding: 3px 0 0;
+}
+.logo-parent {
+  height: 50px;
+  flex-direction: row;
+  gap: 9px;
+}
+.about-us {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;
+  min-width: 92px;
+  white-space: nowrap;
+}
+.predict-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
+}
+.chatbot {
+  height: 23px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;
+  min-width: 85px;
+}
+.chatbot-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4px var(--padding-7xs) 0 0;
+}
+.detect-disease {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.predict-button1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
+}
+.predict {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 72px;
+}
+.but,
+.predict-button-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.but {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-8xs) 28.5px;
+  background-color: var(--color-lightsteelblue);
+  border-radius: var(--br-3xs);
+}
+.but:hover {
+  background-color: var(--color-steelblue-100);
+}
+.predict-button-parent {
+  align-self: stretch;
+  gap: 28px;
+}
+.try-now{
+  position: absolute;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 120px;
+}
+.but1 {
+  border: 0;
+  padding: var(--padding-5xs) 68.3px;
+  background-color: var(--color-steelblue-200);
+  position: absolute;
+  top: 230px;
+  left: 3px;
+  border-radius: var(--br-3xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.but1:hover{
+    background-color: #dfebe9;
+}
+.but2:hover {
+  background-color: var(--color-lightslategray);
+}
+.plant {
+  color: var(--color-lightsteelblue);
+}
+.span {
+  color: var(--color-black);
+}
+.blank-line,
+.predict-before-plant {
+  margin: 0;
+}
+.predict-before-plant-container {
+  margin: 0;
+  height: 349px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+.main-removebg-1-icon {
+  height: 439px;
+  width: 672.4px;
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 219.5px);
+  left: -658.5px;
+  object-fit: cover;
+  z-index: 2;
+}
+.predict-before-plant-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  height: 100%;
+}
+.but-parent {
+  width: 460.5px;
+  height: 349px;
+  position: relative;
+  max-width: 100%;
+  font-size: 70px;
+}
+.frame-parent,
+.logo-component-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent {
+  align-self: stretch;
+  align-items: flex-end;
+  gap: 146px;
+}
+.logo-component-inner {
+  width: 547px;
+  align-items: flex-start;
+  padding: var(--padding-5xs) 0 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-xl);
+}
+.logo-component,
+.logo-component-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.logo-component {
+  width: 1119px;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.logo-component-wrapper {
+  align-self: stretch;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.chatbot-1-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  object-fit: cover;
+}
+.empowering-predictit-with {
+  margin: 0;
+}
+.gemini-1-icon,
+.tite,
+.txt1 {
+  position: relative;
+  max-width: 100%;
+}
+.tite {
+  margin: 0;
+  width: 915.2px;
+  font-size: var(--font-size-21xl);
+  font-weight: 700;
+  font-family: var(--font-calibri);
+  display: inline-block;
+}
+.gemini-1-icon,
+.txt1 {
+  flex: 1;
+}
+.txt1 {
+  height: 210.7px;
+  white-space: pre-wrap;
+  display: inline-block;
+  min-width: 347px;
+}
+.gemini-1-icon {
+  align-self: stretch;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.gemini-1-wrapper,
+.header-layout-container,
+.txt1-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.gemini-1-wrapper {
+  height: 184.6px;
+  width: 360px;
+  flex-direction: column;
+  padding: 45px 0 0;
+  box-sizing: border-box;
+  min-width: 360px;
+}
+.header-layout-container,
+.txt1-parent {
+  flex-direction:1;
+}
+.txt1-parent {
+  flex: 1;
+  gap: 20.6px;
+}
+.header-layout-container {
+  align-self: stretch;
+  padding: 0 var(--padding-7xs) 0 var(--padding-11xs);
+  box-sizing: border-box;
+}
+.txt2 {
+  align-self: stretch;
+  height: 158px;
+  position: relative;
+  white-space: pre-wrap;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.arrow-up-right-1-icon,
+.txt21 {
+  position: absolute;
+  margin: 0 !important;
+  z-index: 1;
+}
+.txt21 {
+  top: 20px;
+  font-weight: 600;
+  color: var(--color-steelblue-200);
+  display: inline-block;
+  min-width: 109px;
+}
+.arrow-up-right-1-icon {
+  width: 20px;
+  height: 20px;
+  right: 273px;
+  bottom: 24.5px;
+  object-fit: cover;
+}
+.txt2-parent {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 100%;
+}
+.frame-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-11xs);
+  box-sizing: border-box;
+}
+.chatbot-1-parent,
+.frame-wrapper,
+.tite-parent,
+.txt-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.tite-parent {
+  width: 930px;
+  flex-direction: column;
+  gap: 10.1px;
+}
+.chatbot-1-parent,
+.txt-content {
+  align-self: stretch;
+  flex-direction: row;
+}
+.chatbot-1-parent {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 39px;
+}
+.man-icon {
+  height: 359px;
+  width: 400px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -109.6px;
+  left: -390px;
+  object-fit: cover;
+}
+.are-you-ready {
+  margin: 0;
+  font-weight: 600;
+}
+.our-innovative-crop {
+  margin: 0;
+  white-space: pre-wrap;
+}
+.content-index,
+.man-parent {
+  position: relative;
+  max-width: 100%;
+}
+.content-index {
+  height: 235.4px;
+  flex: 1;
+  display: inline-block;
+  z-index: 1;
+}
+.man-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.predict1 {
+  position: relative;
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 83px;
+}
+.but2,
+.frame-container,
+.frame-div {
+  display: flex;
+  align-items: flex-start;
+}
+.but2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs-5) 53.5px;
+  background-color: var(--color-steelblue-200);
+  border-radius: var(--br-3xs);
+  flex-direction: row;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.frame-container,
+.frame-div {
+  max-width: 100%;
+}
+.frame-div {
+  width: 550px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32.6px;
+}
+.frame-container {
+  width: 860px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+}
+.detect-disease-button,
+.frame-group {
+  width: 1085px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 113px;
+  max-width: 100%;
+}
+.detect-disease-button {
+  width: 1179px;
+  gap: 45px;
+}
+.detect-disease-button-wrapper {
+  width: 1379px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 31px;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: justify;
+  font-size: var(--font-size-4xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.get-ready-to {
+  margin: 0;
+  font-weight: 600;
+}
+.span1 {
+  font-weight: 600;
+  font-family: var(--font-poppins);
+}
+.powered-by-state-of-the-art-co {
+  margin: 0;
+}
+.content-index1 {
+  height: 306px;
+  width: 568px;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  z-index: 1;
+}
+.detect {
+  position: relative;
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 77px;
+}
+.detect-1-icon {
+  width: 23px;
+  height: 23px;
+  position: relative;
+  object-fit: cover;
+}
+.but3,
+.detect-1-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.detect-1-wrapper {
+  height: 29px;
+  flex-direction: column;
+  padding: var(--padding-7xs) 0 0;
+  box-sizing: border-box;
+}
+.but3 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs-5) var(--padding-21xl);
+  background-color: var(--color-steelblue-200);
+  border-radius: var(--br-3xs);
+  flex-direction: row;
+  gap: 10px;
+}
+.main4-1-icon {
+  align-self: stretch;
+  height: 340px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.main4-1-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-5xs);
+  box-sizing: border-box;
+  min-width: 234px;
+  max-width: 100%;
+}
+.content-index-parent,
+.footer-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.content-index-parent {
+  width: 930px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: var(--padding-5xs) 0 0 378px;
+  position: relative;
+  gap: 2px;
+}
+.footer-layout {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-xl) 0 24px;
+  text-align: justify;
+  font-size: var(--font-size-4xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.div-foot {
+  width: 1440px;
+  height: 274px;
+  position: relative;
+  background-color: var(--color-lightsteelblue);
+  display: none;
+  max-width: 100%;
+}
+.android-chrome-512x512-1-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.it1 {
+  color: var(--color-white);
+}
+.predictit1 {
+  margin: 0;
+  height: 45px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 800;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.predict-call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.android-chrome-512x512-1-parent,
+.footer-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.android-chrome-512x512-1-parent {
+  align-self: stretch;
+  gap: 5px;
+}
+.footer-inner {
+  height: 50px;
+  padding: 0 59px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.home {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 44px;
+  z-index: 1;
+}
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.about,
+.detect1 {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 43px;
+  z-index: 1;
+}
+.detect1 {
+  min-width: 47px;
+}
+.detect-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.contact-us {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 79px;
+  z-index: 1;
+}
+.contact-us-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.frame-parent2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.ce2a131-3cac-481f-af77-d0eb250-icon,
+.fbe55-c3ec-495c-aff1-e6b68a653-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.fbececcaffebae-color {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-8xs) 0 0;
+  box-sizing: border-box;
+  gap: 12px;
+  min-width: 76px;
+}
+.c0-4f19-a8a5-7a0c96c20ca9-1-icon,
+.img-1-icon {
+  height: 50.1px;
+  width: 50px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.img-1-icon {
+  height: 50px;
+  border-radius: var(--br-6xl);
+}
+.cfaacca-logo {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 11px;
+  min-width: 72px;
+}
+.f2533a64-e44c-42b2-bca9-31ccce-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.fbececcaffebae-color-parent,
+.frame-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.fbececcaffebae-color-parent {
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.frame-wrapper1 {
+  align-self: stretch;
+  justify-content: flex-end;
+  padding: 0 var(--padding-sm) 0 18px;
+}
+.copyright-predictit {
+  width: 166px;
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  z-index: 1;
+}
+.c-e-predictit-copyright {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 22px 0 var(--padding-xl);
+  text-align: center;
+  color: var(--color-steelblue-200);
+  font-family: var(--font-poppins);
+}
+.footer,
+.frame-parent1,
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frame-parent1 {
+  align-self: stretch;
+  align-items: flex-end;
+  gap: 22px;
+  font-size: var(--paragraph-regular-16-size);
+  font-family: var(--paragraph-regular-16);
+}
+.footer,
+.index {
+  box-sizing: border-box;
+}
+.footer {
+  align-self: stretch;
+  background-color: var(--color-lightsteelblue);
+  align-items: flex-start;
+  padding: 30px 507px 19px 591px;
+  gap: 31px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.index {
+  width: 100%;
+  position: relative;
+  background-color: #dfebe9;
+  overflow: hidden;
+  align-items: flex-end;
+  padding: var(--padding-16xl) 0 0;
+  gap: 95px;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 750px) {
+  .frame-parent {
+    gap: 73px 146px;
+  }
+  .chatbot-1-parent {
+    gap: 19px 39px;
+  }
+  .frame-div {
+    gap: 16px 32.6px;
+  }
+  .frame-group {
+    gap: 28px 113px;
+  }
+  .detect-disease-button {
+    gap: 22px 45px;
+  }
+  .footer {
+    gap: 15px 31px;
+    padding-left: 295px;
+    padding-right: 253px;
+    box-sizing: border-box;
+  }
+  .index {
+    gap: 47px 95px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .predict-before-plant-container {
+    font-size: 42px;
+  }
+  .frame-parent {
+    gap: 36px 146px;
+  }
+  .tite {
+    font-size: var(--font-size-5xl);
+  }
+  .txt1 {
+    font-size: var(--font-size-lg);
+  }
+  .gemini-1-wrapper,
+  .txt1 {
+    min-width: 100%;
+  }
+  .content-index,
+  .content-index1,
+  .detect,
+  .predict1,
+  .txt2,
+  .txt21 {
+    font-size: var(--font-size-lg);
+  }
+  .content-index-parent {
+    padding-left: 94px;
+    box-sizing: border-box;
+  }
+  .predictit1 {
+    font-size: 19px;
+  }
+  .footer-inner {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .frame-parent2 {
+    flex-wrap: wrap;
+  }
+  .footer {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .index {
+    gap: 24px 95px;
+  }
+}
+  </style>
+  <body>
+    <div class="index">
+      <section class="detect-disease-button-wrapper">
+        <div class="detect-disease-button">
+          <header class="logo-component-wrapper">
+            <div class="logo-component">
+              <div class="logo-parent">
+                <img
+                  class="logo-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/logo-main.png"
+                />
+
+                <div class="predictit-wrapper">
+                  <h3 class="predictit">
+                    <span>Predict</span>
+                    <span class="it">it</span>
+                  </h3>
+                </div>
+              </div>
+              <div class="logo-component-inner">
+                <div class="frame-parent">
+                  <div class="predict-button-parent">
+                    <div class="predict-button">
+                      <div class="about-us">About us</div>
+                    </div>
+                    <div class="chatbot-wrapper">
+                      <div class="chatbot">Chatbot</div>
+                    </div>
+                    <div class="predict-button1">
+                      <div class="detect-disease">Detect Disease</div>
+                    </div>
+                    <button class="but">
+                      <div class="predict">Predict</div>
+                    </button>
+                  </div>
+                  <div class="but-parent">
+
+                    <div class="predict-before-plant-parent">
+                      <h1 class="predict-before-plant-container">
+                        <p class="predict-before-plant">
+                          <span>Predict before </span>
+                          <span class="plant">Plant</span>
+                          <span class="span"></span>
+                        </p>
+                        <p class="blank-line">&nbsp;</p>
+                      </h1>
+                      <img
+                        class="main-removebg-1-icon"
+                        loading="lazy"
+                        alt=""
+                        src="templates/assets/main-removebg.png"
+                      />
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </header>
+          <button onclick="topredict()" class="but1">
+            <div class="try-now">Try now</div>
+          </button>
+          <div class="frame-group">
+            <div class="chatbot-1-parent">
+              <img
+                class="chatbot-1-icon"
+                loading="lazy"
+                alt=""
+                src="templates/assets/chatbot.png"
+              />
+
+              <div class="txt-content">
+                <div class="tite-parent">
+                  <h2 class="tite">
+                    <p class="empowering-predictit-with">
+                      Empowering Predictit with Google Gemini Pro :
+                    </p>
+                  </h2>
+                  <div class="header-layout-container">
+                    <div class="txt1-parent">
+                      <div class="txt1">
+                        We're thrilled to introduce the driving force behind the dynamic content on our platform - the Google Gemini API.This cutting-edge API has become the backbone of PredictIT, optimizing content creation and taking it to unprecedented levels of excellence.
+                      </div>
+                      <div class="gemini-1-wrapper">
+                        <img
+                          class="gemini-1-icon"
+                          loading="lazy"
+                          alt=""
+                          src="templates/assets/gemini.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-wrapper">
+                    <div class="txt2-parent">
+                      <div class="txt2">
+                        Our chatbot is designed to provide instant and accurate information on a wide range of topics related to soil health, crop cultivation, and agricultural best practices. Whether you're a seasoned farmer or just starting your journey in agriculture, our chatbot is here to assist you.
+                      
+                    </div>
+                    <div class="txt21">chat now</div>
+                      <img
+                        class="arrow-up-right-1-icon"
+                        loading="lazy"
+                        alt=""
+                        src="templates/assets/arrow-up-right.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="man-parent">
+                  <img
+                    class="man-icon"
+                    loading="lazy"
+                    alt=""
+                    src="templates/assets/man.png"
+                  />
+
+                  <div class="content-index">
+                    <p class="are-you-ready">
+                      Are you ready to revolutionize your farming experience?
+                    </p>
+                    <p class="our-innovative-crop">
+                      Our innovative Crop Yield Prediction tool, powered by the Random forest algorithm, brings precision and intelligence to your agricultural practices. Say goodbye to uncertainties and hello to optimized yields!
+                    </p>
+                  </div>
+                </div>
+                <button class="but2">
+                  <div class="predict1">Predict</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-layout">
+        <div class="content-index-parent">
+          <div class="content-index1">
+            <p class="get-ready-to">
+              Get ready to transform your crop management with our cutting-edge
+              Disease Detection tool!
+            </p>
+            <p class="powered-by-state-of-the-art-co">
+              <span class="span1"> </span>
+              <span
+                >Powered by state-of-the-art Convolutional Neural Networks
+                (CNNs) and bolstered by Transfer Learning using VGG16 and ResNet
+                architectures, our solution ensures precise identification of
+                crop diseases. Bid farewell to uncertainties and welcome
+                optimized crop health!</span
+              >
+            </p>
+          </div>
+          <button class="but3">
+            <div class="detect">Detect</div>
+            <div class="detect-1-wrapper">
+              <img
+                class="detect-1-icon"
+                alt=""
+                src="templates/assets/detect.png"
+              />
+            </div>
+          </button>
+          <div class="main4-1-wrapper">
+            <img
+              class="main4-1-icon"
+              loading="lazy"
+              alt=""
+              src="templates/assets/main4.png"
+            />
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="div-foot"></div>
+        <div class="footer-inner">
+          <div class="android-chrome-512x512-1-parent">
+            <img
+              class="android-chrome-512x512-1-icon"
+              loading="lazy"
+              alt=""
+              src="templates/assets/android-chrome-512x512.png"
+            />
+
+            <div class="predict-call-to-action">
+              <h3 class="predictit1">
+                <span>Predict</span>
+                <span class="it1">it</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="frame-parent1">
+          <div class="frame-parent2">
+            <div class="home-wrapper">
+              <div class="home">Home</div>
+            </div>
+            <div class="about">About</div>
+            <div class="detect-wrapper">
+              <div class="detect1">Detect</div>
+            </div>
+            <div class="contact-us-wrapper">
+              <div class="contact-us">Contact Us</div>
+            </div>
+          </div>
+          <div class="frame-wrapper1">
+            <div class="fbececcaffebae-color-parent">
+              <div class="fbececcaffebae-color">
+                <img
+                  class="fbe55-c3ec-495c-aff1-e6b68a653-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/hari.jpeg"
+                />
+
+                <img
+                  class="ce2a131-3cac-481f-af77-d0eb250-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/kamalesh.jpeg"
+                />
+              </div>
+              <div class="cfaacca-logo">
+                <img
+                  class="c0-4f19-a8a5-7a0c96c20ca9-1-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/sharvesh.jpeg"
+                />
+
+                <img
+                  class="img-1-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/murugesh.jpg"
+                />
+              </div>
+              <img
+                class="f2533a64-e44c-42b2-bca9-31ccce-icon"
+                loading="lazy"
+                alt=""
+                src="templates/assets/darshna.jpeg"
+              />
+            </div>
+          </div>
+          <div class="c-e-predictit-copyright">
+            <div class="copyright-predictit">Copyright © Predictit</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+        function topredict(){
+            window.location.href='predict.html';
+        }
+    </script>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Calibri:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap"
+    />
+  </head>
+  <style>
+    .bg-1-icon2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 1038px;
+  object-fit: cover;
+}
+.frame-child {
+  width: 774px;
+  height: 710px;
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-white);
+  border: 8px solid var(--color-lightsteelblue);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.arr-blue-1-icon {
+  width: 34px;
+  height: 32.2px;
+  position: relative;
+  object-fit: cover;
+  z-index: 2;
+}
+.blue-arrangement {
+  height: 44.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px 0 0;
+  box-sizing: border-box;
+}
+.result1 {
+  margin: 0;
+  height: 43px;
+  width: 135px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.blue-arrangement-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 0 33.8px;
+  gap: var(--gap-xl);
+  text-align: center;
+  font-size: var(--font-size-21xl);
+}
+.crop,
+.disease {
+  height: 43px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.crop {
+  width: 94px;
+}
+.disease {
+  align-self: stretch;
+}
+.crop-disease-label {
+  width: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.cause-of-disease {
+  width: 283px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  z-index: 2;
+}
+.frame-parent4 {
+  width: 407px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  max-width: 100%;
+}
+.how-to-preventcure {
+  width: 517px;
+  height: 43px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+  max-width: 100%;
+  z-index: 2;
+}
+.rectangle-parent,
+.result {
+  background-color: var(--color-white);
+  box-sizing: border-box;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 168px;
+  left: 337px;
+  border-radius: var(--br-6xl);
+  border: 8px solid var(--color-lightsteelblue);
+  width: 774px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) 43px 263px;
+  gap: 158px;
+  max-width: 100%;
+  z-index: 1;
+}
+.result {
+  width: 100%;
+  height: 1025px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  border: 1px solid var(--color-black);
+  overflow: hidden;
+  letter-spacing: normal;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-steelblue-200);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 750px) {
+  .result1 {
+    font-size: var(--font-size-13xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .result1 {
+    font-size: var(--font-size-5xl);
+  }
+  .blue-arrangement-parent {
+    flex-wrap: wrap;
+  }
+  .cause-of-disease,
+  .crop,
+  .disease,
+  .how-to-preventcure {
+    font-size: var(--paragraph-regular-16-size);
+  }
+  .result {
+    height: auto;
+    min-height: 1025;
+  }
+}
+  </style>
+  <body>
+    <div class="result">
+      <img class="bg-1-icon2" alt="" src="templates/assets/bg.jpg" />
+
+      <div class="rectangle-parent">
+        <div class="frame-child"></div>
+        <div class="frame-parent4">
+          <div class="blue-arrangement-parent">
+            <div class="blue-arrangement">
+              <img
+                class="arr-blue-1-icon"
+                loading="lazy"
+                alt=""
+                src="templates/assets/arr-blue.png"
+              />
+            </div>
+            <h1 class="result1">Result</h1>
+          </div>
+          <div class="crop-disease-label">
+            <div class="crop">Crop :</div>
+            <div class="disease">Disease :</div>
+          </div>
+          <div class="cause-of-disease">Cause of Disease :</div>
+        </div>
+        <div class="how-to-preventcure">How to prevent/cure the disease :</div>
+      </div>
+    </div>
+  </body>
+</html>

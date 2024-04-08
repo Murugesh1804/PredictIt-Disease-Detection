@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./chatbot.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Calibri:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap"
+    />
+  </head>
+  <style>
+    .chat-container {
+  width: 500px;
+  height: 512px;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-200);
+  display: none;
+  max-width: 100%;
+}
+.chatbot2 {
+  margin: 0;
+  height: 45px;
+  width: 170px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.chatbot-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.div,
+.input {
+  position: relative;
+  background-color: var(--color-white);
+}
+.div {
+  border: 0;
+  height: 330px;
+  width: auto;
+  outline: 0;
+  align-self: stretch;
+  border-radius: var(--br-mini);
+  z-index: 1;
+}
+.input {
+  height: 50px;
+  width: 336px;
+  border-radius: var(--br-8xs);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+  max-width: 100%;
+}
+.ask-your-doubts {
+  width: 203px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.input-parent {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 13px 16px var(--padding-sm);
+  box-sizing: border-box;
+  min-width: 203px;
+  white-space: nowrap;
+  max-width: 100%;
+  z-index: 1;
+}
+.send {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  font-family: var(--paragraph-regular-16);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  min-width: 46px;
+}
+.but4,
+.chatbox,
+.frame-parent3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.but4 {
+  cursor: pointer;
+  border: 0;
+  padding: 10.5px 25px;
+  background-color: var(--color-lightsteelblue);
+  border-radius: var(--br-8xs);
+  flex-direction: row;
+  z-index: 1;
+}
+.but4:hover {
+  background-color: var(--color-steelblue-100);
+}
+.chatbox,
+.frame-parent3 {
+  align-self: stretch;
+  max-width: 100%;
+}
+.frame-parent3 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: #a2a2a2;
+  font-family: var(--paragraph-regular-16);
+}
+.chatbox {
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-200);
+  flex-direction: column;
+  padding: 10px var(--padding-7xl) 31.2px;
+  box-sizing: border-box;
+  gap: 22.9px;
+  z-index: 1;
+}
+.bg-1-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 1038px;
+  object-fit: cover;
+}
+.add-image-1-icon{
+position: absolute;
+  top: 631px;
+  left: 890px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  z-index: 3;
+}
+.arrow-small-left-1-icon {
+  position: absolute;
+  top: 630px;
+  left: 793px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  z-index: 3;
+}
+.arrow-small-left-1-icon {
+  top: 212px;
+  left: 496px;
+  width: 33px;
+  height: 30px;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.chatbot1 {
+  width: 100%;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 187px var(--padding-451xl) 325px;
+  box-sizing: border-box;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 750px) {
+  .chatbox {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .chatbot2 {
+    font-size: var(--font-size-5xl);
+  }
+  .send {
+    font-size: var(--paragraph-regular-16-size);
+  }
+  .chatbot1 {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}   
+  </style>
+  <body>
+    <div class="chatbot1">
+      <div class="chatbox">
+        <div class="chat-container"></div>
+        <div class="chatbot-container">
+          <h1 class="chatbot2">Chatbot</h1>
+        </div>
+        <div id="div" class="div" rows="{17}" cols="{22}"> </div>
+        <div class="frame-parent3">
+          <input placeholder="Ask your doubts..." class="input-parent" />
+          </div>
+          <button class="but4">
+            <div class="send">Send</div>
+          </button>
+        </div>
+      </div>
+      <main class="background">
+        <img class="bg-1-icon" alt="" src="templates/assets/bg.jpg" />
+
+        <input type="file" id="imageInput" style="display: none;" accept="image/*">
+        <img style="cursor: pointer;"
+          class="add-image-1-icon"
+          loading="lazy"
+          alt=""
+          src="templates/assets/add-image.png"
+          onclick="selectImage()"
+        /></input>
+
+        <button style="cursor: pointer;" onclick="back()"><img
+          class="arrow-small-left-1-icon"
+          loading="lazy"
+          alt=""
+          src="templates/assets/arrow-small-left.png"
+        /></button>
+      </main>
+    </div>
+  </body>
+  <script>
+    function back(){
+        window.location.href='index.html';
+    }
+
+    function selectImage() {
+    document.getElementById('imageInput').click();
+}
+
+document.getElementById('imageInput').addEventListener('change', function() {
+    // Get the selected image file
+    var selectedImage = this.files[0];
+    
+    // Do something with the selected image, for example display it
+    displayImage(selectedImage);
+});
+
+document.getElementById('imageInput').addEventListener('change', function() {
+    var selectedImage = this.files[0];
+    displayResizedImage(selectedImage);
+});
+
+function displayResizedImage(imageFile) {
+    var reader = new FileReader();
+    
+    reader.onload = function(event) {
+        var imgElement = document.createElement('img');
+        imgElement.src = event.target.result;
+        
+        imgElement.style.maxWidth = '200px'; // Set default max width
+        imgElement.style.maxHeight = '200px'; // Set default max height
+        imgElement.style.position = 'absolute';
+        
+        var imageContainer = document.getElementById('div');
+        imageContainer.innerHTML = ''; // Clear previous content
+        imageContainer.appendChild(imgElement);
+        imgElement.style.left = '50%';
+        imgElement.style.top = '50%';
+        imgElement.style.transform = 'translate(-50%, -50%)';
+    };
+    
+    reader.readAsDataURL(imageFile);
+}
+  </script>
+</html>
